@@ -4,8 +4,62 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>coffeerun</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
 </head>
-<body>
+<body class="container">
+    <header>
+        <h1>coffeerun</h1>
+    </header>
+    <section>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form data-coffee-order="form">
+                    <div class="form-group">
+                        <label for="coffeeOrder"> coffee order</label>
+                        <input class="form-control" name="coffee" id="coffeeOrder" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input class="form-control" type="email" name="email" id="emailInput" 
+                            value="" placeholder="请输入邮箱!">
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="size" value="short">
+                            Short
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="size" value="tall" checked>
+                            Tall
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="size" value="grande">
+                            Grande
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="flavorShot">种类</label>
+                        <select id="flavorShot" class="form-control" name="flavor">
+                            <option value="">None</option>
+                            <option value="Caramel">Caramel</option>
+                            <option value="Almond">Almond</option>
+                            <option value="Mocha">Mocha</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="strengthLevel">Caffeine Rating</label>
+                        <input name="strength" id="strengthLevel" type="range" value="30">
+                    </div>
+                    <button type="submit" class="btn btn-default">提交</button>
+                    <button type="reset" class="btn btn-default">重置</button>
+                </form>
+            </div>
+        </div>
+    </section>
     <script src="scripts/datastore.js"></script>
     <script src="scripts/truck.js"></script>
     <script src="scripts/main.js"></script>
